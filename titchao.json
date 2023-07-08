@@ -1,0 +1,87 @@
+{
+  "uuid": "48bf43c8-4233-4060-9a9a-7b20cf714d85",
+  "lastMigration": 27,
+  "name": "Equipes",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "ce529920-3e8f-4ac0-8181-4a9c78e37de9",
+      "type": "http",
+      "documentation": "openapi: 3.0.0 info:   title: Exemplo de API de equipes   version: 1.0.0   description: Uma API simples para consulta de informações sobre equipes servers:   - url: http://localhost:3001/api/equipes     description: Servidor de desenvolvimento local paths:   /api/equipes:     get:       summary: Retorna uma lista de equipes       responses:         '200':           description: OK           content:             application/json:               schema:                 type: object                 properties:                   equipes:                     type: array                     items:                       type: object                       properties:                         id:                           type: integer                           description: O ID da equipe                           example: 1                         time:                           type: string                           description: O nome da equipe                           example: Anchieta                         pontos:                           type: integer                           description: A quantidade de pontos da equipe                           example: 5         '500':           description: Erro interno do servidor           content:             application/json:               schema:                 type: object                 properties:                   mensagem:                     type: string                     example: Ocorreu um erro ao buscar as equipes",
+      "method": "get",
+      "endpoint": "api/equipes",
+      "responses": [
+        {
+          "uuid": "65c9bb36-653b-4aea-b871-6b85eda32863",
+          "body": "{\r\n   \"equipes\":[\r\n      {\r\n         \"id\":1,\r\n         \"time\":\"Anchieta\",\r\n         \"pontos\":\"5\"\r\n      },\r\n      {\r\n         \"id\":2,\r\n         \"time\":\"Czarnobai\",\r\n         \"pontos\":\"10\"\r\n      },\r\n      {\r\n         \"id\":3,\r\n         \"time\":\"Pesque e pague Boff\",\r\n         \"pontos\":\"15\"\r\n      },\r\n      {\r\n         \"id\":4,\r\n         \"time\":\"Assis Brasil\",\r\n         \"pontos\":\"2\"\r\n      },\r\n      {\r\n         \"id\":5,\r\n         \"time\":\"Linha Antas\",\r\n         \"pontos\":\"20\"\r\n      }\r\n   ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://127.0.0.1:5500"
+            },
+            {
+              "key": "Access-Control-Allow-Headers",
+              "value": "content-type"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "ce529920-3e8f-4ac0-8181-4a9c78e37de9"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}

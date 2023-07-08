@@ -1,0 +1,121 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #424242;
+    height: 10vh;
+}
+
+#headerTitle{
+    font-size: 2rem;
+    color: 	#DDDDDD;
+    margin-left: 10px;
+}
+
+.linkTitle{
+    font-size: 1.5rem;
+    color: #DDDDDD;
+    transition: 0.5s;
+    margin-right: 10px;
+}
+
+.linkTitle:hover{
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #424242;
+    height: 5vh;
+    color: #DDDDDD;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 150px ;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+  a{
+    text-decoration: none;
+}
+
+  main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  h2{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #footerLink{
+    color: #DDDDDD;
+    transition: 0.5s;
+  }
+
+.footerAbout{
+    margin-top: 700px;
+}
+
+button{
+  width: 40%;
+  height: 50px;
+  border: none;
+  color: #FFFFFF;
+  background-color: #424242;
+  opacity: 0.8;
+  transition: 0.5s;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+button:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+table, th, td {
+  border: 3px solid #424242;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+#teams-table{
+  display: none;
+}
+
+#error{
+  text-align: center;
+  color: #ff0505;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  footer{
+    margin-top: 0px ;
+  }
+}
+
+#footerLink:hover{
+  color: #FFFFFF;
+  transition: 0.5s;
+}

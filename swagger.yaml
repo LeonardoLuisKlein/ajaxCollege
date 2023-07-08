@@ -1,0 +1,47 @@
+openapi: 3.0.0
+info:
+  title: Exemplo de API de equipes
+  version: 1.0.0
+  description: Uma API simples para consulta de informações sobre equipes
+servers:
+  - url: http://localhost:3001/api/equipes
+    description: Servidor de desenvolvimento local
+paths:
+  /api/equipes:
+    get:
+      summary: Retorna uma lista de equipes
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  equipes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: O ID da equipe
+                          example: 1
+                        time:
+                          type: string
+                          description: O nome da equipe
+                          example: Anchieta
+                        pontos:
+                          type: integer
+                          description: A quantidade de pontos da equipe
+                          example: 5
+        '500':
+          description: Erro interno do servidor
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mensagem:
+                    type: string
+                    example: Ocorreu um erro ao buscar as equipes
